@@ -15,6 +15,7 @@ import { FetchTodoComponent } from './fetchTodo/FetchTodo.component';
 // Services
 import { EmployeeService } from './Services/employee.service';
 import { TodoService } from './Services/todo.service';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TodoService } from './Services/todo.service';
     CreateemployeeComponent,
     FetchEmployeeComponent,
     AddTodoComponent,
-    FetchTodoComponent
+    FetchTodoComponent,
+    UploadFileComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -40,6 +42,7 @@ import { TodoService } from './Services/todo.service';
       { path: 'employee/edit/:id', component: CreateemployeeComponent },
       { path: 'add-todo', component: AddTodoComponent },
       { path: 'Todo/edit/:id', component: AddTodoComponent },
+      { path: 'uploadfile', component: UploadFileComponent },
       { path: '**', redirectTo: 'home' }
     ])
   ],
